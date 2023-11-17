@@ -1,6 +1,6 @@
 {
   "name": "whatsapp-country-code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "npm package to fetch the list of country name and codes supported by whatsapp.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -22,5 +22,9 @@
     "ts-node": "^10.9.1",
     "tsup": "^7.3.0",
     "typescript": "^5.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gilbishkosma/whatsapp-country-code.git"
   }
 }
