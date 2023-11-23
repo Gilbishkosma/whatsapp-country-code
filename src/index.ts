@@ -1,5 +1,8 @@
 import data from "./data";
 import { dataProp } from "./interface";
+
+export interface CountryProp extends dataProp {}
+
 /**
  * Retrieves a list of whatsapp supported countries with their relevant information.
  *
@@ -9,7 +12,7 @@ import { dataProp } from "./interface";
  *   - Alpha-3 code: The three-letter country code.
  *   - Country Code: The international dialing code for the country.
  */
-export function getCountries() {
+export function getCountries(): CountryProp[] {
   return data;
 }
 
@@ -34,13 +37,23 @@ export function getByName(name: string): dataProp | undefined {
 }
 
 /**
- * Retrieves a country object by its code.
+ * Retrieves the first country object by its code.
  *
  * @param {string} code - The country code.
  * @returns {dataProp | undefined} The country object if found, or undefined if not found.
  */
 export function getByCode(code: string): dataProp | undefined {
   return data.find((item: dataProp) => item.code === code);
+}
+
+/**
+ * Retrieves list of countries with same code.
+ *
+ * @param {string} code - The country code.
+ * @returns {dataProp[] | undefined} The country object if found, or undefined if not found.
+ */
+export function getAllByCode(code: string): dataProp[] | undefined {
+  return data.filter((item: dataProp) => item.code === code);
 }
 
 /**

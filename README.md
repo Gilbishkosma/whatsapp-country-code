@@ -60,9 +60,19 @@ const excludeCountries = filterByExcludedNames(['Egypt','Antarctica']) // this w
 
 const data = getByName('Egypt'); // single country by name
 
-const data = getByCode('+91'); // single country by code
+const data = getByCode('+91'); // first country by code
+
+const data = getAllByCode('+91'); // list of countires with same code
 
 const data = getByAlpha2Code('IN'); // single country by alpha 2 code
 
 const data = getByAlpha3Code('IND'); // single country by alpha 3 code
+```
+
+### TypeScript
+
+```
+ import {CountryProp} from 'whatsapp-country-code';
+
+ const data: CountryProp = getByName('Egypt');
 ```
