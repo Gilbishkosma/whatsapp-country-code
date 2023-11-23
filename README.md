@@ -62,7 +62,7 @@ const data = getByName('Egypt'); // single country by name
 
 const data = getByCode('+91'); // first country by code
 
-const data = getAllByCode('+91'); // list of countires with same code
+const data = getAllByCode('+1'); // list of countires with same code
 
 const data = getByAlpha2Code('IN'); // single country by alpha 2 code
 
